@@ -2,14 +2,16 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import MovieListItem from './MovieListItem';
 
 const MovieList = props => (
   <div className="listo">
     <div className="list detail">
       {
-        props.list.movies.map(info => (
+        props.list.movies.map((info, index) => (
           <MovieListItem
+            className={classnames(index % 2 ? 'even' : 'odd')}
             {...info}
             key={info.id}
           />
