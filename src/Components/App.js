@@ -1,16 +1,14 @@
 'use strict';
 
-import React, { Component } from 'react';
+import React from 'react';
+import MovieList from './MovieList';
+import list from '../data.json';
+import './App.css';
 
-//css
-require('style-loader!./App.css');
-
-class App extends Component {
-  render() {
-    return (
-      <h1>Movie Reviews</h1>
-    );
-  }
-}
+const App = () => (
+  <div className="page">
+    <MovieList list={list} />
+  </div>
+);
 
 export default App;
